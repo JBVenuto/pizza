@@ -1,5 +1,5 @@
 //Import connection.js
-var connection = require("../config/connection.js");
+var connection = require("./connection.js");
 
 //Object with all the functions that can be called from this file
 var orm = {
