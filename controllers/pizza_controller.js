@@ -11,7 +11,7 @@ router = express.Router();
 router.get("/", function(req, res) {
     pizza.selectAll(function(data) {
         var hbsObject = {
-            pizzas: data
+            pizza: data
         };
         console.log(hbsObject);
         res.render("index", hbsObject);
