@@ -1,4 +1,6 @@
-$(function() {
+
+
+$(document).ready(function() {
     //Change the devoured boolean
     //Find out what pizza was eaten and store the new state
     $(".eat").on("click", function(event) {
@@ -10,7 +12,7 @@ $(function() {
         };
 
         //Update the database with the new devoured status
-        $.ajax("/api/pizzas" + id, {
+        $.ajax("/api/pizzas/" + id, {
             type: "PUT",
             data: newDevouredState
         }).then(
@@ -23,7 +25,7 @@ $(function() {
     });
 
     //Add a new pizza to the list
-    $(".create-form").on("submit", function(event) {
+    $(document).on("click", "submit", function(event) {
         event.preventDefault();
         //Get the name from the input form
         var newPizza = {
