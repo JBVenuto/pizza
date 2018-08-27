@@ -1,0 +1,20 @@
+<h1>Giuseppe's Pizza</h1>
+<h2>Available Pizzas</h2>
+
+<ul>
+    {{#each pizzas}}
+        {{#unless devoured}}
+            {{> pizzacard ate=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Already Eaten Pizzas</h2>
+
+<ul>
+    {{#each pizzas}}
+        {{#if devoured}}
+            {{> pizzacard ate=false}}
+        {{/if}}
+    {{/each}}
+</ul>
