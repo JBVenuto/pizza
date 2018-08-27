@@ -1,0 +1,12 @@
+<li>
+    <div class="card">
+        <div class="card-body">
+            <span>
+                {{pizza_name}}
+            </span>
+            <span>
+                <button type="button" class="btn btn-success eat" data-id="{{id}}" data-newate="{{ate}}">
+                    {{#if !ate}}DEVOUR{{else}}Order Again{{/if}}
+                </button>
+            </span>
+</li>
