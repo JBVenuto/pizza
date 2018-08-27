@@ -4,8 +4,8 @@ var connection = require("./connection.js");
 //Object with all the functions that can be called from this file
 var orm = {
     //Collect all the data from the table
-    selectAll: function(tableInput, cb) {
-        var queryString = "SELECT * FROM" + tableInput + ";";
+    selectAll: function(req, cb) {
+        var queryString = "SELECT * FROM pizza;";
         connection.query(queryString, function(err, res) {
             if (err) throw err;
             cb(res);

@@ -1,8 +1,9 @@
-<h1>Giuseppe's Pizza</h1>
+<div class="text-center font-weight-bold text-success">Giuseppe's Pizza</div>
+
 <h2>Available Pizzas</h2>
 
 <ul>
-    {{#each pizzas}}
+    {{#each pizza}}
         {{#unless devoured}}
             {{> pizzacard ate=true}}
         {{/unless}}
@@ -12,7 +13,7 @@
 <h2>Already Eaten Pizzas</h2>
 
 <ul>
-    {{#each pizzas}}
+    {{#each pizza}}
         {{#if devoured}}
             {{> pizzacard ate=false}}
         {{/if}}

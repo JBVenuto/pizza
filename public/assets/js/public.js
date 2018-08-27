@@ -22,4 +22,6 @@ $(function() {
         );
     });
 
+    //Add a new pizza to the list
+
 });
