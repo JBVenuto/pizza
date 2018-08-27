@@ -23,5 +23,23 @@ $(function() {
     });
 
     //Add a new pizza to the list
+    $(".create-form").on("submit", function(event) {
+        event.preventDefault();
+        //Get the name from the input form
+        var newPizza = {
+            pizza_name: $("#pz").val().trim()
+        }
+        //Send the newly added pizza to the database
+        $.ajax("/api/pizzas", {
+            type: "POST",
+            data: newPizza
+        }).then(
+            function() {
+                console.log("created new pizza");
+                //reload the page with the new pizza added
+                location.reload();
+            }
+        );
+    });
 
 });
