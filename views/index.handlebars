@@ -1,4 +1,4 @@
-<div class="text-center font-weight-bold text-success">Giuseppe's Pizza</div>
+<div class="text-center" id="top"><button class="btn btn-success btn-lg">Giuseppe's Pizza</button></div>
 
 <h2>Available Pizzas</h2>
 
@@ -19,3 +19,12 @@
         {{/if}}
     {{/each}}
 </ul>
+
+<h2>Add a New Pizza</h2>
+
+<form class="create-form">
+    <div class="form-group">
+        <label for="pz">Pizza Name:</label>
+        <input type="text" id="pz" name="pizza_name">
+    </div>
+</form>
