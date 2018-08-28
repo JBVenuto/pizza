@@ -14,6 +14,7 @@ if(process.env.JAWSDB_URL) {
     password: "root",
     database: "pizza_db"
 });
+}
 
 //Make the connection to the database
 connection.connect(function(err) {
