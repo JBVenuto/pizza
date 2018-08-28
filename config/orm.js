@@ -22,6 +22,7 @@ var orm = {
     //Update the devoured boolean of the pizza
     updateOne: function(condition, cb) {
         var queryString = "UPDATE pizza SET devoured = true WHERE id = " + condition;
+        console.log(queryString)
         connection.query(queryString, function(err, res) {
             if (err) throw err;
             cb(res);

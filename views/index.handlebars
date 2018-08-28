@@ -1,34 +1,52 @@
-<div class="text-center" id="top"><button class="btn btn-success btn-lg">Giuseppe's Pizza</button></div>
+<div class="text-center font-weight-bold text-white" id="top" style="padding:10px;font-size:38px"><span class="bg-success" style="padding:5px 5px;">Giuseppe's Pizza</span></div>
 
-<h2>Available Pizzas</h2>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {{!-- <div class="row"> --}}
+                <h2>Available Pizzas</h2>
+            {{!-- </div> --}}
 
-<ul>
-    {{#each pizza}}
-        {{#unless devoured}}
-            {{> pizzacard ate=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
+            <div class="row">
+                <div class="col">
+                    {{!-- <div class="card"> --}}
+                        {{!-- <ul class="list-group list-group-flush"> --}}
+                            {{#each pizza}}
+                                {{#unless devoured}}
+                                    {{> pizzacard ate=true}}
+                                {{/unless}}
+                            {{/each}}
+                        {{!-- </ul> --}}
+                    {{!-- </div> --}}
+                </div>
+            </div>
+        </div>
 
-<h2>Already Eaten Pizzas</h2>
+        <div class="col">
+        <h2>Already Eaten Pizzas</h2>
 
-<ul>
-    {{#each pizza}}
-        {{#if devoured}}
-            {{> pizzacard ate=false}}
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a New Pizza</h2>
-
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="pz">Pizza Name:</label>
-        <input type="text" id="pz" name="pizza_name">
+            
+                {{#each pizza}}
+                    {{#if devoured}}
+                        {{> pizzacard ate=false}}
+                    {{/if}}
+                {{/each}}
+            
+        </div>
     </div>
 
-    <button class="btn btn-success" type="submit">Add Pizza</button>
+    <br>
 
-</form>
+    <h2>Add a New Pizza</h2>
+
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="pz">Pizza Name:</label>
+            <input type="text" id="pz" name="pizza_name">
+        </div>
+
+        <button class="btn btn-success" type="submit">Add Pizza</button>
+
+    </form>
+</div>

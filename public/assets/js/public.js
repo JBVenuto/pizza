@@ -19,7 +19,7 @@ $(document).ready(function() {
             function() {
                 console.log("changed state to ", newAte);
                 //reload the page with the updated list
-                location.reload()
+                // location.reload()
             }
         );
     });
@@ -39,7 +39,7 @@ $(document).ready(function() {
             function() {
                 console.log("created new pizza");
                 //reload the page with the new pizza added
-                location.reload();
+                // location.reload();
             }
         );
     });
