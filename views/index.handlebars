@@ -1,23 +1,17 @@
 <div class="text-center font-weight-bold text-white" id="top" style="padding:10px;font-size:38px"><span class="bg-success" style="padding:5px 5px;">Giuseppe's Pizza</span></div>
 
-<div class="container">
+<div class="container" style="margin-top:5px">
     <div class="row">
         <div class="col">
-            {{!-- <div class="row"> --}}
-                <h2>Available Pizzas</h2>
-            {{!-- </div> --}}
+            <h2>Available Pizzas</h2>
 
             <div class="row">
                 <div class="col">
-                    {{!-- <div class="card"> --}}
-                        {{!-- <ul class="list-group list-group-flush"> --}}
-                            {{#each pizza}}
-                                {{#unless devoured}}
-                                    {{> pizzacard ate=true}}
-                                {{/unless}}
-                            {{/each}}
-                        {{!-- </ul> --}}
-                    {{!-- </div> --}}
+                    {{#each pizza}}
+                        {{#unless devoured}}
+                            {{> pizzacard ate=true}}
+                        {{/unless}}
+                    {{/each}}
                 </div>
             </div>
         </div>

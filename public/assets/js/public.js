@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
     //Change the devoured boolean
     //Find out what pizza was eaten and store the new state

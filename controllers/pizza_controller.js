@@ -18,12 +18,12 @@ router.get("/", function(req, res) {
     });
 });
 
-//Add a cat to the table
+//Add a pizza to the table
 router.post("/api/pizzas", function(req, res) {
     pizza.insertOne([
-        "name"
+        "pizza_name"
     ], [
-        reg.body.name
+        reg.body.pizza_name
     ], function(result) {
         res.json({ id: result.insertedId });
     });
