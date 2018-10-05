@@ -19,7 +19,7 @@ router.get("/", function(req, res) {
 });
 
 //Add a pizza to the table
-router.post("/api/pizzas", function(req, res) {
+router.post("/api/pizzas/create", function(req, res) {
     pizza.insertOne([
         "pizza_name"
     ], [

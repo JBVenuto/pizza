@@ -2,6 +2,8 @@ $(document).ready(function() {
     //Change the devoured boolean
     //Find out what pizza was eaten and store the new state
     $(".eat").on("click", function(event) {
+        event.preventDefault();
+
         var id = $(this).data("id");
         var newAte = $(this).data("newate")
 

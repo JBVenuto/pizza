@@ -87,7 +87,7 @@ var orm = {
     //--------------------------------------------------------------------------
     updateOne: function(condition, cb) {
         console.log(condition);
-        var queryString = "UPDATE pizza SET devoured = true WHERE id = " + request;
+        var queryString = "UPDATE pizza SET devoured = true WHERE id = " + condition;
         console.log(queryString)
         connection.query(queryString, function(err, res) {
             if (err) throw err;

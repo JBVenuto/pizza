@@ -13,7 +13,7 @@ var pizza = {
             cb(res);
         });
     },
-    updateOne: function(condition, cb) {
+    updateOne: function(devour, condition, cb) {
         orm.updateOne(condition, function(res){
             cb(res);
         });
