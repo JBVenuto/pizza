@@ -37,10 +37,12 @@ router.post("/pizzas/create", function(req, res) {
 //Update a pizza's devoured status
 router.put("/pizzas/:id", function(req, res) {
     var id =  req.params.id;
-    console.log(util.inspect(req.params));
+    var devouredState = req.body.devoured;
+    console.log("req: " + util.inspect(req.body.devoured));
     console.log("id: " + id);
+    console.log("devoured: " + devouredState);
     //Check to see if the pizza is ready to eat or already been eaten
-    if(id == 1) {
+    if(devouredState == "false") {
         console.log("This pizza has already been eaten");
         // pizza.orderAgain
     }
