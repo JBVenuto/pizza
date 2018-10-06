@@ -12,7 +12,7 @@ $(document).ready(function() {
         };
 
         //Update the database with the new devoured status
-        $.ajax("/api/pizzas/" + id, {
+        $.ajax("/pizzas/" + id, {
             type: "PUT",
             data: newDevouredState
         }).then(

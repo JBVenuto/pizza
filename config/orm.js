@@ -85,7 +85,7 @@ var orm = {
     //   },
     //Update the devoured boolean of the 
     //--------------------------------------------------------------------------
-    updateOne: function(condition, cb) {
+    eat: function(condition, cb) {
         console.log(condition);
         var queryString = "UPDATE pizza SET devoured = true WHERE id = " + condition;
         console.log(queryString)
@@ -94,6 +94,15 @@ var orm = {
             cb(res);
         });
     },
+    orderAgain: function(condition, cb) {
+        console.log(condition);
+        var queryString = "UPDATE pizza SET devoured = false WHERE id = " + condition;
+        console.log(queryString)
+        connection.query(queryString, function(err, res) {
+            if (err) throw err;
+            cb(res);
+        });
+    }
     //----------------------------------------------------------------------------
     //above is commented out for testing below is replacement for testing
     //-------------------------------------------------------------------------

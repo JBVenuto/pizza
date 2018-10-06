@@ -13,8 +13,13 @@ var pizza = {
             cb(res);
         });
     },
-    updateOne: function(devour, condition, cb) {
-        orm.updateOne(condition, function(res){
+    eat: function(devour, condition, cb) {
+        orm.eat(condition, function(res){
+            cb(res);
+        });
+    },
+    orderAgain: function(devour, condition, cb) {
+        orm.orderAgain(condition, function(res){
             cb(res);
         });
     }
