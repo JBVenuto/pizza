@@ -44,10 +44,17 @@ router.put("/pizzas/:id", function(req, res) {
     //Check to see if the pizza is ready to eat or already been eaten
     if(devouredState == "false") {
         console.log("This pizza has already been eaten");
-        // pizza.orderAgain
+        pizza.orderAgain(id, function(result) {
+            console.log(result);
+            res.sendStatus(200);
+        });
     }
     else {
         console.log("This pizza is ready to eat.");
+        pizza.eat(id, function(result) {
+            console.log(result);
+            res.sendStatus(200);
+        });
     }
     // pizza.updateOne({
     //     devoured: true

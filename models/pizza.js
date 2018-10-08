@@ -13,13 +13,13 @@ var pizza = {
             cb(res);
         });
     },
-    eat: function(devour, condition, cb) {
-        orm.eat(condition, function(res){
+    eat: function(id, cb) {
+        orm.eat(id, function(res){
             cb(res);
         });
     },
-    orderAgain: function(devour, condition, cb) {
-        orm.orderAgain(condition, function(res){
+    orderAgain: function(id, cb) {
+        orm.orderAgain(id, function(res){
             cb(res);
         });
     }
