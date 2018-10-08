@@ -20,6 +20,7 @@ $(document).ready(function() {
                 console.log("changed state to ", newAte);
                 //reload the page with the updated list
                 // location.reload()
+                location.reload();
             }
         );
     });
