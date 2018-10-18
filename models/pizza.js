@@ -9,9 +9,11 @@ var pizza = {
         });
     },
     insertOne: function(name, cb) {
-        orm.insertOne(name, function(res) {
-            cb(res);
-        });
+        orm.insertOne("pizza", [
+            "pizza_name", "devoured"
+        ], [
+            name, false
+        ], cb);
     },
     eat: function(id, cb) {
         orm.eat(id, function(res){

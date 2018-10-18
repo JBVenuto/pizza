@@ -52,37 +52,39 @@ var orm = {
     },
     //Insert a new pizza into the table
     //-----------------------------------------------------------------------
-    insertOne: function(pizza_name, cb) {
-        console.log("pizza name: " + pizza_name)
-        var queryString = "INSERT INTO pizza (pizza_name) VALUES (?)";
-        connection.query(queryString, pizza_name, function(err, res) {
-            if (err) throw err;
-            cb(res);
-        });
-    },
+    // insertOne: function(name, cb) {
+    //     console.log("pizza name: " + name)
+    //     var queryString = "INSERT INTO pizza (";
+    //     queryString += name.toString();
+    //     queryString += ") VALUES (?)";
+    //     connection.query(queryString, function(err, res) {
+    //         if (err) throw err;
+    //         cb(res);
+    //     });
+    // },
     //-------------------------------------------------------------------------
     //above is commented out for testing below is replacement for testing
     //-------------------------------------------------------------------------
-    // insertOne: function(table, cols, vals, cb) {
-    //     var queryString = "INSERT INTO " + table;
+    insertOne: function(table, cols, vals, cb) {
+        var queryString = "INSERT INTO " + table;
     
-    //     queryString += " (";
-    //     queryString += cols.toString();
-    //     queryString += ") ";
-    //     queryString += "VALUES (";
-    //     queryString += printQuestionMarks(vals.length);
-    //     queryString += ") ";
+        queryString += " (";
+        queryString += cols.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
     
-    //     console.log(queryString);
+        console.log(queryString);
     
-    //     connection.query(queryString, vals, function(err, result) {
-    //       if (err) {
-    //         throw err;
-    //       }
+        connection.query(queryString, vals, function(err, result) {
+          if (err) {
+            throw err;
+          }
     
-    //       c  b(result);
-    //     });
-    //   },
+          cb(result);
+        });
+    },
     //Update the devoured boolean of the 
     //--------------------------------------------------------------------------
     eat: function(condition, cb) {

@@ -25,12 +25,9 @@ router.get("/pizzas", function(req, res) {
 
 //Add a pizza to the table
 router.post("/pizzas/create", function(req, res) {
-    pizza.insertOne([
-        "pizza_name"
-    ], [
-        reg.body.pizza_name
-    ], function(result) {
-        res.json({ id: result.insertedId });
+    pizza.insertOne(req.body.pizza_name, function(result) {
+        console.log(result);
+        res.redirect("/");
     });
 });
 
